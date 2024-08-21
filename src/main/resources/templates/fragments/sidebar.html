@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="sidebar" class='active' th:fragment="sidebar"><!--sidebar-->
+    <div class="sidebar-wrapper active">
+        <div class="sidebar-header">
+            <img src="images/3.png" alt="" srcset="">
+        </div>
+        <div class="sidebar-menu">
+            <ul class="menu">
+
+
+                <li class='sidebar-title'>Menu Principal</li>s
+
+                <li class="sidebar-item active ">
+                    <a href="/dashboard" class='sidebar-link'>
+                        <i data-feather="home" width="20"></i>
+                        <span>Dashboard</span>
+                    </a>
+
+                </li>
+
+
+          <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="triangle" width="20"></i>
+                        <span>Comercial</span>
+                    </a>
+
+                    <ul class="submenu ">
+                    <li>
+                            <a href="/dashboard">Home Comercial</a>
+                        </li>
+                    
+                    <li>
+                            <a href="/clients">Clientes</a>
+                        </li>
+
+                        <li>
+                            <a href="/walletAdd">Carteira</a>
+                        </li>
+                        
+                        
+
+                    </ul>
+
+                </li>
+
+<li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="briefcase" width="20"></i>
+                        <span>TimeSheet</span>
+                    </a>
+
+                    <ul class="submenu ">
+
+                        <li>
+                            <a href="/tasks">Tarefa</a>
+                        </li>
+                         <li>
+                            <a href="/projects">Projecto</a>
+                        </li>
+                         <li>
+                            <a href="/activities">Actividade</a>
+                        </li>
+	
+	                        
+
+                    </ul>
+
+                </li>
+
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="triangle" width="20"></i>
+                        <span>Recursos Humanos</span>
+                    </a>
+
+                    <ul class="submenu ">
+                    <li>
+                            <a href="/dashbord">Home RH</a>
+                        </li>
+
+                        <li>
+                            <a href="/employees">Colaboradores</a>
+                        </li>
+                         <li>
+                            <a href="component-alert.html">Gestão de Ferias</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+
+
+                
+
+
+
+            
+
+
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="file-text" width="20"></i>
+                        <span>Agendamentos</span>
+                    </a>
+
+                    <ul class="submenu ">
+
+                        <li>
+                            <a href="/schedules">Input</a>
+                        </li>
+
+                   
+
+                    </ul>
+
+                </li>
+                
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="file-text" width="20"></i>
+                        <span>Payroll</span>
+                    </a>
+
+                    <ul class="submenu ">
+
+                        <li>
+                            <a href="form-element-input.html">Input</a>
+                        </li>
+
+                   
+
+                    </ul>
+
+                </li>
+                         
+                       <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="file-text" width="20"></i>
+                        <span>Contas</span>
+                    </a>
+
+                    <ul class="submenu ">
+
+                        <li>
+                            <a href="form-element-input.html">Input</a>
+                        </li>
+
+                   
+
+                    </ul>
+
+                </li>
+                       <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="file-text" width="20"></i>
+                        <span>helpDesk</span>
+                    </a>
+
+                    <ul class="submenu ">
+
+                        <li>
+                            <a href="form-element-input.html">Equipamentos</a>
+                        </li>
+                        <li>
+                            <a href="form-element-input.html"></a>
+                        </li>
+
+                   
+
+                    </ul>
+
+                </li>
+
+
+
+<!--sidebar
+                <li class="sidebar-item  ">
+                    <a href="form-layout.html" class='sidebar-link'>
+                        <i data-feather="layout" width="20"></i>
+                        <span>Form Layout</span>
+                    </a>
+
+                </li>
+
+
+
+
+                <li class="sidebar-item  ">
+                    <a href="form-editor.html" class='sidebar-link'>
+                        <i data-feather="layers" width="20"></i>
+                        <span>Form Editor</span>
+                    </a>
+
+                </li>
+
+
+
+
+                <li class="sidebar-item  ">
+                    <a href="table.html" class='sidebar-link'>
+                        <i data-feather="grid" width="20"></i>
+                        <span>Table</span>
+                    </a>
+
+                </li>
+
+
+
+
+                <li class="sidebar-item  ">
+                    <a href="table-datatable.html" class='sidebar-link'>
+                        <i data-feather="file-plus" width="20"></i>
+                        <span>Datatable</span>
+                    </a>
+
+                </li>
+
+
+-->
+  				<li class="sidebar-item  ">
+                    <a href="/parameters" class='sidebar-link'>
+                        <i data-feather="layers" width="20"></i>
+                        <span>Parametros</span>
+                    </a>
+
+                </li>
+                <li class='sidebar-title'>Configurações</li>
+
+
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="user" width="20"></i>
+                        <span>Administração</span>
+                    </a>
+
+                    <ul class="submenu ">
+
+                   
+                        <li>
+                            <a href="ui-todolist.html">Permissões</a>
+                        </li>
+                         <li>
+                            <a href="/walletAdd">Estados</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+<!--
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="trending-up" width="20"></i>
+                        <span>Charts</span>
+                    </a>
+
+                    <ul class="submenu ">
+
+                        <li>
+                            <a href="ui-chart-chartjs.html">ChartJS</a>
+                        </li>
+
+                        <li>
+                            <a href="ui-chart-apexchart.html">Apexchart</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+
+
+                <li class='sidebar-title'>Pages</li>
+
+
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="user" width="20"></i>
+                        <span>Authentication</span>
+                    </a>
+
+                    <ul class="submenu ">
+
+                        <li>
+                            <a href="auth-login.html">Login</a>
+                        </li>
+
+                        <li>
+                            <a href="auth-register.html">Register</a>
+                        </li>
+
+                        <li>
+                            <a href="auth-forgot-password.html">Forgot Password</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="alert-circle" width="20"></i>
+                        <span>Errors</span>
+                    </a>
+
+                    <ul class="submenu ">
+
+                        <li>
+                            <a href="error-403.html">403</a>
+                        </li>
+
+                        <li>
+                            <a href="error-404.html">404</a>
+                        </li>
+
+                        <li>
+                            <a href="error-500.html">500</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+-->
+
+
+            </ul>
+        </div>
+        <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+    </div>
+</div>
+</body>
+</html>

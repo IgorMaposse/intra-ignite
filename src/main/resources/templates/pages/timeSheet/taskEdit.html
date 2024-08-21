@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/dashboard}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="main-content container-fluid" layout:fragment="content">
+  <div class="row">
+  <h1>   Editar Tarefa</h1>
+  
+  <div class="container"  style="width:100%">
+          <div class="row">
+              <div class="col-lg-12">
+                <section class="panel">
+                  <header class="panel-heading">
+                
+                  </header>
+                  <div class="panel-body">
+                    <form class="form-horizontal " th:action="@{'/tasks/update/'+${task.id}}" method="post">
+                      <!--date picker start-->
+							<input type="hidden" name="_method" value="put"/>
+                      <div class="form-group">
+                        <label class="control-label col-sm-4">Data de Inicio</label>
+                        <div class="col-sm-6">
+                          <input name="startDate" th:value="${task.startDate}" type="text"  size="16" class="form-control">
+                        </div>
+                      </div>
+                     <div class="form-group">
+                        <label class="control-label col-sm-4">Duracao</label>
+
+                        <div class="col-sm-5">
+                          <input name="comment" th:value="${task.comment}" type="text" class="form-control">
+                        </div>
+                      </div>
+
+
+                      <div class="form-group">
+                        <label class="control-label col-sm-4"> Projecto</label>
+                        <select class="form-control" name="projectid">
+                        <option>-SELECT-</option>
+                        <option th:each="project:${projects}"
+                        		th:value="${project.id}"
+                        
+                        		th:text="${project.name}"></option>
+                        <option></option>
+                        
+                        </select>
+                      </div>
+                      <!--date picker end-->
+	<!--	th:selected="${project.id}==${task.projectTaskid}"-->
+                      <!--color picker start-->
+                      <div class="form-group">
+                        <label class="control-label col-sm-4">Actividade</label>
+
+                        <div class="col-sm-5">
+                          <input name="activity" th:value="${task.activity}" type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-sm-4">Comentario</label>
+
+                        <div class="col-sm-5">
+                          <input name="comment" th:value="${task.comment}" type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <!--color picker end-->
+      				</section>
+                         <section class="panel">
+
+		              <div class="panel-body">
+		             <button type="submit" class="btn btn-success"> Salvar</button>
+		             
+		                 <a href="/tasks" class="btn btn-warning">
+		                                 Voltar
+                 </a>
+     
+              </div>
+            </section>
+                    </form>
+
+
+                  </div>
+          
+              </div>
+
+            </div>
+  
+  
+  </div>
+   
+     
+
+</div>
+</body>
+</html>
