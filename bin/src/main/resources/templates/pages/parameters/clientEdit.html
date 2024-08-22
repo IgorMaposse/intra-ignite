@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/dashboard}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="main-content container-fluid" layout:fragment="content">
+  <div class="row">
+  <h1>   Editar Cliente</h1>
+  
+  <div class="container"  style="width:100%">
+          <div class="row">
+              <div class="col-lg-12">
+                <section class="panel">
+                  <header class="panel-heading">
+                
+                  </header>
+                  <div class="panel-body">
+                    <form class="form-horizontal " th:action="@{'/clients/update/'+${client.id}}" method="post">
+                      <!--date picker start-->
+ 					<input type="hidden" name="_method" value="put"/>
+                      <div class="form-group">
+                        <label class="control-label col-sm-4">Nome</label>
+                        <div class="col-sm-6">
+                          <input name="name" th:value="${client.name}" type="text"  size="16" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-sm-4">Endereço</label>
+                        <div class="col-sm-6">
+
+
+                          
+                            <input name="address" th:value="${client.address}" class="form-control" size="16" type="text" >
+
+                        
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-sm-4"> Telefone</label>
+                        <div class="col-sm-6">
+                     
+                            <input name="phone" th:value="${client.phone}" type="text" class=" form-control" />
+                      
+                        </div>
+                      </div>
+                      <!--date picker end-->
+						 <div class="form-group">
+                        <label class="control-label col-sm-4">Telefone Alternativo</label>
+                        <div class="col-sm-6">
+                     
+                            <input name="mobile" th:value="${client.mobile}" type="text" class=" form-control" />
+                      
+                        </div>
+                      </div>
+                      <!--color picker start-->
+                      <div class="form-group">
+                        <label class="control-label col-sm-4">Email</label>
+
+                        <div class="col-sm-5">
+                          <input name="email" th:value="${client.email}" type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-sm-4">Cidade</label>
+
+                        <div class="col-sm-5">
+                          <input name="city" th:value="${client.city}" type="text" class="form-control">
+                        </div>
+                      </div>
+	
+						<div class="form-group">
+                        <label class="control-label col-sm-4">Website</label>
+
+                        <div class="col-sm-5">
+                          <input name="website" th:value="${client.website}" type="text" class="form-control">
+                        </div>
+                      </div>
+                      <!--color picker end-->
+      				</section>
+                         <section class="panel">
+
+		              <div class="panel-body">
+		             <button type="submit" class="btn btn-success"> Salvar</button>
+		              
+		                 <a href="/clients" class="btn btn-warning">
+		                                 Voltar
+                 </a>
+	     
+	              </div>
+	            </section>
+	                   	</form>
+
+
+                  </div>
+          
+              </div>
+
+            </div>
+  
+  
+  </div>
+   
+     
+
+</div>
+</body>
+</html>

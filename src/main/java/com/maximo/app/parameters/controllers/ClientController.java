@@ -33,9 +33,14 @@ public class ClientController {
 	private StateService stateService;
 
 	@GetMapping("/clients")
-   public  String getAllCountries(Model model){
-		List<Client> clients=clientService.getAllClients();
-	
+   public  String getAllClients(Model model , String keyword){
+		List<Client> clients;
+		
+		if(keyword==null) {
+			clients=clientService.getAllClients();
+		}else {
+			clients=clientService.getByKeyword(keyword);
+		}
 		
 		for (Client client : clients) {
 	        System.out.println("Client: " + client.getName());

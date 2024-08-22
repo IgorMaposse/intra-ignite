@@ -14,5 +14,7 @@ public interface ClientService {
 	void deleteClient(Integer id);
 	
 	public Client getClientById(Integer id);
+	
+	public List<Client> getByKeyword(String keyword);
 
 }

@@ -40,4 +40,10 @@ public class ClientServiceImpl implements ClientService{
 		return clientRepository.findById(id).orElse(null);
 	}
 
+	@Override
+	public List<Client> getByKeyword(String keyword) {
+		// TODO Auto-generated method stub
+		return clientRepository.getByKeyword(keyword);
+	}
+
 }
