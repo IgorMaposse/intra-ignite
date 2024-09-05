@@ -24,4 +24,11 @@ public class AdminController {
 			return "pages/parameters/countryList";
 		}
 
+	@GetMapping("/teste")
+	   public  String teste(){
+		
+			
+			return "pages/auth-login";
+		}
+
 }
