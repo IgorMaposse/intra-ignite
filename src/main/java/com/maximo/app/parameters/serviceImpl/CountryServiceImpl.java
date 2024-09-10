@@ -4,6 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +36,12 @@ public class CountryServiceImpl implements CountryService {
 		
 	}
 
+    public Page<Country> findPage(int pageNumber){
+        Pageable pageable = PageRequest.of(pageNumber -1, 5);
+        return countryRepository.findAll(pageable);
+    }
+
+
 	@Override
 	public void delete(Integer id) {
 		// TODO Auto-generated method stub
@@ -45,5 +55,19 @@ public class CountryServiceImpl implements CountryService {
 		
 		return countryRepository.findById(id).orElse(null);
 	}
+
+    public List<Country> findByKeyword(String keyword){
+        return countryRepository.findByKeyword(keyword);
+    }
+
+
+    public Page<Country> findAllWithSort(String field, String direction, int pageNumber) {
+        Sort sort = direction.equalsIgnoreCase(Sort.Direction.ASC.name()) ?
+                Sort.by(field).ascending() : Sort.by(field).descending();
+
+        Pageable pageable = PageRequest.of(pageNumber - 1, 5, sort);
+
+        return countryRepository.findAll(pageable);
+    }
 
 }

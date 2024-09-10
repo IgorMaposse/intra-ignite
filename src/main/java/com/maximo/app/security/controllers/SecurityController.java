@@ -19,7 +19,7 @@ public class SecurityController {
 	}
 	@RequestMapping("/index")
 	public String homePage() {
-		return "/pages/landing_page";
+		return "/pages/index";
 	}
 
 }

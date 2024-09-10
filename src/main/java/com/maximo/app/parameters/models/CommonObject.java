@@ -2,6 +2,7 @@ package com.maximo.app.parameters.models;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.maximo.app.security.models.Auditable;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,7 +11,7 @@ import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-public class CommonObject{
+public class CommonObject  extends Auditable<String>{
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

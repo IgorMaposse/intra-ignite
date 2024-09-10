@@ -32,7 +32,7 @@ extends WebSecurityConfigurerAdapter  {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/login", "/resources/**", "/css/**", "/fonts/**", "/img/**").permitAll()
-                .antMatchers("/register", "/resources/**", "/css/**", "/fonts/**", "/img/**", "/js/**").permitAll()
+                .antMatchers("/register", "/resources/**", "/css/**", "/fonts/**","/images/**", "/img/**", "/js/**").permitAll()
                 .antMatchers("/users/addNew").permitAll()
                 .antMatchers("/security/user/Edit/**").hasAuthority("ADMIN")
                 .anyRequest().authenticated()
