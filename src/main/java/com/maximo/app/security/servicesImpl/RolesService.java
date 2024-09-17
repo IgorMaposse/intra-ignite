@@ -40,7 +40,7 @@ public class RolesService {
     public void save(Role role) {
         roleRepository.save(role);
     }
-/*
+
     //Assign Role to User
     public void assignUserRole(Integer userId, Integer roleId) {
         User user = userRepository.findById(userId).orElse(null);
@@ -69,5 +69,5 @@ public class RolesService {
     public List<Role> getUserNotRoles(User user) {
         return roleRepository.getUserNotRoles(user.getId());
     }
-*/
+
 }

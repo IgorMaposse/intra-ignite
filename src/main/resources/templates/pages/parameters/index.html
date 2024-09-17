@@ -5,57 +5,69 @@
     <title>Title</title>
 </head>
 <body>
-<div class="main-content container-fluid" layout:fragment="content">
-    <div class="row">
-          <div class="col-lg-4">
-            <section class="panel">
-              <div class="panel-body">
-              		<div class="card">
-		      		<div class="card-body">
-		       <h5 class="card-title"><h3><b>Gestão de Paises</b></h3></h5>
-		        <p class="card-text">Listagem de Localidades</p>
-		        <a href="/countries" class="btn btn-primary">Gestão de Localidades</a>
-		  </div>
-    </div>
-              		
-              </div>
-            </section>
-          </div>
-          <div class="col-lg-4">
-            <section class="panel">
-              <div class="panel-body">
-              
-              <div class="card">
-		      <div class="card-body">
-		       <h5 class="card-title"><h3><b>Gestão RH</b></h3></h5>
-		        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-		        <a href="/parameters" class="btn btn-primary">Gestao RH</a>
-		      </div>
-    		</div>
-              </div>
-            </section>
-          </div>
-          
-          <div class="col-lg-4">
-            <section class="panel">
-              <div class="panel-body">
-			              <div class="card">
-			      <div class="card-body">
-			 <h5 class="card-title"><h3><b>Gestão Estados</b></h3></h5>
-			        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-			        <a href="/states" class="btn btn-primary">Gestão Estados</a>
-      </div>
-    </div>
-              </div>
-            </section>
-          </div>
-    </div>
 
-  
-      
-    </div>
-    
+<div layout:fragment="content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa fa-bars"></i>Parameters Home</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="/index">Parameters Home</a></li>
+                    <li><i class="fa fa-bars"></i><a href="/hr">Parameters Home</a></li>
+                    <li><i class="fa fa-square-o"></i>Parameters Home</li>
+                </ol>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-lg-4">
+                <section class="panel">
+                    <div class="panel-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><h3><b>Paises</b></h3></h5>
+                                <p class="card-text">Gestão de Localidades</p>
+                                <a href="/countries" class="btn btn-primary">Gerenciar países</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+           
+
+
+            <div class="col-lg-4">
+                <section class="panel">
+                    <div class="panel-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><h3><b>Clientes</b></h3></h5>
+                                <p class="card-text">Gestão de Clientes.</p>
+                                <a href="/clients" class="btn btn-primary">Gerenciar Clientes</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <section class="panel">
+                    <div class="panel-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><h3><b>Provincias</b></h3></h5>
+                                <p class="card-text">Gestão de Localidades.</p>
+                                <a href="/states" class="btn btn-primary">Gerenciar Provincias</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </section>
 </div>
+
 </body>
 </html>

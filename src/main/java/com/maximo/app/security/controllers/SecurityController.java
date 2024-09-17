@@ -17,9 +17,13 @@ public class SecurityController {
 	public String register() {
 		return "/pages/security/register";
 	}
-	@RequestMapping("/index")
+	@RequestMapping("/security")
 	public String homePage() {
-		return "/pages/index";
+		return "/pages/security/index";
 	}
+	   @GetMapping("/accessDenied")
+	    public String accessDenied() {
+	        return "pages/accessDenied";
+	    }
 
 }

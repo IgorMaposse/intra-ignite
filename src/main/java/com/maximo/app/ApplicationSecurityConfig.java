@@ -24,8 +24,8 @@ extends WebSecurityConfigurerAdapter  {
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
 
         return new BCryptPasswordEncoder();
+        
     }
-    
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
@@ -34,7 +34,7 @@ extends WebSecurityConfigurerAdapter  {
                 .antMatchers("/login", "/resources/**", "/css/**", "/fonts/**", "/img/**").permitAll()
                 .antMatchers("/register", "/resources/**", "/css/**", "/fonts/**","/images/**", "/img/**", "/js/**").permitAll()
                 .antMatchers("/users/addNew").permitAll()
-                .antMatchers("/security/user/Edit/**").hasAuthority("ADMIN")
+                .antMatchers("/security/userEdit/**").hasAuthority("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -49,9 +49,7 @@ extends WebSecurityConfigurerAdapter  {
                 .exceptionHandling().accessDeniedPage("/accessDenied")
         ;
     }
-	
 
-	
 	@Autowired
 	private UserDetailsService userDetailsService;
 	

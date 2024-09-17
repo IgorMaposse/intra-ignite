@@ -41,7 +41,7 @@
                             <label for="ddlClientAdd" class="col-sm-4 col-form-label">Cliente: </label>
                             <div class="col-sm-6">
                                 <select class="form-control" id="ddlClientAdd" name="clientid">
-                                    <option>-SELECT-</option>
+                                    <option>-SELECIONAR-</option>
                                     <option th:each="client : ${clients}"
                                             th:value="${client.id}"
                                             th:text="${client?.name}">
@@ -99,7 +99,7 @@
                   
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i>Adicionar</a>
+                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i>Detalhes</a>
                         <a class="btn btn-success" 
                          th:href="@{'clientEditt/'+${client.id}}"><i class="icon_check_alt2"></i>Editar</a>
                         <a class="btn btn-danger" 

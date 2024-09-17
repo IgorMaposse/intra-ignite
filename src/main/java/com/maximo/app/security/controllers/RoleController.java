@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.maximo.app.security.models.Role;
 import com.maximo.app.security.servicesImpl.RolesService;
-import com.maximo.app.security.servicesImpl.UserService;
+import com.maximo.app.security.servicesImpl.UserServiceImpl;
 
 @Controller
 public class RoleController {
@@ -23,7 +23,7 @@ public class RoleController {
     private RolesService roleService;
 
     @Autowired
-    private UserService userService;
+    private UserServiceImpl userService;
 
     @GetMapping("/security/roles")
     public String parameters(Model model) {
@@ -49,19 +49,19 @@ public class RoleController {
         roleService.delete(id);
         return "redirect:/security/roles";
     }
-/*
+
     @RequestMapping("/security/role/assign/{userId}/{roleId}")
     public String assignRole(@PathVariable Integer userId,
                              @PathVariable Integer roleId) {
         roleService.assignUserRole(userId, roleId);
-        return "redirect:/security/user/Edit/" + userId;
+        return "redirect:/security/userEdit/" + userId;
     }
 
     @RequestMapping("/security/role/unassign/{userId}/{roleId}")
     public String unassignRole(@PathVariable Integer userId,
                                @PathVariable Integer roleId) {
         roleService.unassignUserRole(userId, roleId);
-        return "redirect:/security/user/Edit/" + userId;
-    }*/
+        return "redirect:/security/userEdit/" + userId;
+    }
 	
 }

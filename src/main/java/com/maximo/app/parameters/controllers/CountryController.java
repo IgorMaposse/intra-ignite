@@ -115,12 +115,7 @@ public class CountryController {
 	
 	
 	
-	
-	
-	@GetMapping("/dashboard")
-	public String test() {
-		return "/pages/index";
-	}
+
 	
 	@GetMapping("/hr")
 	public String hr() {

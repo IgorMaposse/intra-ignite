@@ -58,6 +58,22 @@ public class ClientController {
 	    return getAllClientsPage(model, 1);
 	}
 	
+	
+	@GetMapping("/dashboard")
+	public String test(Model model) {
+		
+		List<Client> clients;
+		clients= clientService.getAllClients();
+		int numberOfClients =0;
+		
+		for (Client client : clients) {
+			numberOfClients++;
+	        System.out.println("Client: " + client.getName());
+	    }
+		model.addAttribute("numberOfClients",numberOfClients);
+		model.addAttribute("clients", clients);
+		return "/pages/index";
+	}
 	@GetMapping("/clients/page/{pageNumber}")
 	   public  String getAllClientsPage(Model model , @PathVariable("pageNumber") int currentPage ){
 			List<Client> clients;
