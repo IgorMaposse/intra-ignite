@@ -6,23 +6,25 @@
 </head>
 
 
+
 <body>
+
 <div layout:fragment="content">
     <section class="wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="page-header"><i class="fa fa fa-bars"></i> Parameters</h3>
+                <h3 class="page-header"><i class="fa fa fa-bars"></i> Parametros</h3>
                 <ol class="breadcrumb">
                     <li><i class="fa fa-home"></i><a href="/index">Home</a></li>
-                    <li><i class="fa fa-bars"></i><a href="/parameters">Parameters</a></li>
-                    <li><i class="fa fa-square-o"></i>Parameters</li>
+                    
+                    <li><i class="fa fa-square-o"></i>Parametros</li>
                 </ol>
             </div>
         </div>
     <div class="container" style="width: 70%">
-        <div class="row justify-content-center" >
-            <div class="col-lg-12">
-                <form class="form-horizontal" th:action="@{'/clients/update/'+${client.id}}" method="post">
+    <div class="row justify-content-center" >
+        <div class="col-lg-12">
+          <form class="form-horizontal" th:action="@{'/clients/update/'+${client.id}}" method="post">
             <input type="hidden" name="_method" value="put"/>
             <section class="panel">
                 <header class="panel-heading">
@@ -30,42 +32,43 @@
                 </header>
                 <div class="panel-body">
                <div class="row">
-    <div class="col">
-     
-        <div class="form-group row">
-                            <label for="txtIdAdd" class="col-sm-4 col-form-label">Id: </label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" id="txtIdAdd" name="id" placeholder="Id" disabled>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="txtNameAdd" class="col-sm-4 col-form-label">Nome: </label>
-                            <div class="col-sm-6">
-                                <input type="text" th:value="${client.name}" class="form-control"  name="name" >
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="txtEmailAdd" class="col-sm-4 col-form-label">Email</label>
-                            <div class="col-sm-6">
-                                <input type="email" class="form-control"  th:value="${client.email}" name="email" >
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="txtWebsiteAdd" class="col-sm-4 col-form-label">website: </label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control"  th:value="${client.website}" name="website" >
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="txtAddressAdd" class="col-sm-4 col-form-label">Endereço</label>
-                            <div class="col-sm-6">
-                                <textarea class="form-control"  th:value="${client.address}" name="address"rows="2"></textarea>
-                            </div>
-                        </div>
-    </div>
-    <div class="col">
-     
-       			<div class="form-group row">
+				    			<div class="col-lg-6">
+				     
+				        						<div class="form-group row">
+						                            <label for="txtIdAdd" class="col-sm-4 col-form-label">Id: </label>
+						                            <div class="col-sm-6">
+						                                <input type="text" class="form-control" id="txtIdAdd" name="id" placeholder="Id" disabled>
+						                            </div>
+						                        </div>
+						                        <div class="form-group row">
+						                            <label for="txtNameAdd" class="col-sm-4 col-form-label">Nome: </label>
+						                            <div class="col-sm-6">
+						                                <input type="text" th:value="${client.name}" class="form-control"  name="name" >
+						                            </div>
+						                        </div>
+						                        <div class="form-group row">
+						                            <label for="txtEmailAdd" class="col-sm-4 col-form-label">Email</label>
+						                            <div class="col-sm-6">
+						                                <input type="email" class="form-control"  th:value="${client.email}" name="email" >
+						                            </div>
+						                        </div>
+						                        <div class="form-group row">
+						                            <label for="txtWebsiteAdd" class="col-sm-4 col-form-label">website: </label>
+						                            <div class="col-sm-6">
+						                                <input type="text" class="form-control"  th:value="${client.website}" name="website" >
+						                            </div>
+						                        </div>
+						                        <div class="form-group row">
+						                            <label for="txtAddressAdd" class="col-sm-4 col-form-label">Endereço</label>
+						                            <div class="col-sm-6">
+						                                <textarea class="form-control"  th:value="${client.address}" name="address"rows="2"></textarea>
+						                            </div>
+						                        </div>
+				                  </div>
+				  
+		    				<div class="col-lg-6">
+		     
+		       			<div class="form-group row">
                             <label for="ddlCountryAdd" class="col-sm-4 col-form-label">País: </label>
                             <div class="col-sm-6">
                                  <select class="form-control" name="countryid">
@@ -115,9 +118,8 @@
                                 <input type="text" class="form-control"  th:value="${client.details}" name="details" >
                             </div>
                         </div>
-    </div>
-  </div>
-                 
+		  					</div>
+                 </div>
                 </div>
             </section>
 
@@ -132,13 +134,11 @@
                 </div>
             </section>
             </form>
-            </div>
         </div>
+        
+    </div>
     </div>
     </section>
 </div>
-
 </body>
-
-
 </html>

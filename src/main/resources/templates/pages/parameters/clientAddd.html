@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
+
+
 <body>
 
-<div class="main-content container-fluid" layout:fragment="content">
-  <section class="wrapper">
-
-    <div class="container" style="width: 100%">
+<div layout:fragment="content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa fa-bars"></i> Parametros</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="/dashboard">Home</a></li>
+                    
+                    <li><i class="fa fa-square-o"></i>Parametros</li>
+                </ol>
+            </div>
+        </div>
+    <div class="container" style="width: 70%">
     <div class="row justify-content-center" >
         <div class="col-lg-12">
             <form class="form-horizontal" th:action="@{/clients}" method="post">
@@ -19,92 +31,93 @@
                 </header>
                 <div class="panel-body">
                <div class="row">
-    <div class="col">
-     
-        <div class="form-group row">
-                            <label for="txtIdAdd" class="col-sm-4 col-form-label">Id: </label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" id="txtIdAdd" name="id" placeholder="Id" disabled>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="txtNameAdd" class="col-sm-4 col-form-label">Nome: </label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" id="txtNameAdd" name="name" placeholder="Nome">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="txtEmailAdd" class="col-sm-4 col-form-label">Email</label>
-                            <div class="col-sm-6">
-                                <input type="email" class="form-control" id="txtEmailAdd" name="email" placeholder="Email">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="txtWebsiteAdd" class="col-sm-4 col-form-label">website: </label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" id="txtWebsiteAdd" name="website" placeholder="Website">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="txtAddressAdd" class="col-sm-4 col-form-label">Endereço</label>
-                            <div class="col-sm-6">
-                                <textarea class="form-control" id="txtAddressAdd" name="address" placeholder="Endereço" rows="2"></textarea>
-                            </div>
-                        </div>
-    </div>
-    <div class="col">
-     
-       			<div class="form-group row">
-                            <label for="ddlCountryAdd" class="col-sm-4 col-form-label">País: </label>
-                            <div class="col-sm-6">
-                                <select class="form-control" id="ddlCountryAdd" name="countryid">
-                                    <option>-SELECT-</option>
-                                    <option th:each="country : ${countries}"
-                                            th:value="${country.id}"
-                                            th:text="${country.description}">
-                                    </option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="ddlStateAdd" class="col-sm-4 col-form-label">Província: </label>
-                            <div class="col-sm-6">
-                                <select class="form-control" id="ddlStateAdd" name="stateid">
-                                    <option>-SELECT-</option>
-                                   <option th:each="state : ${states}"
-                                            th:value="${state.id}"
-                                            th:text="${state.name}">
-                                    </option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="txtCityAdd" class="col-sm-4 col-form-label">Cidade: </label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" id="txtCityAdd" name="city" placeholder="Cidade">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="txtPhoneAdd" class="col-sm-4 col-form-label">Telefone: </label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" id="txtPhoneAdd" name="phone" placeholder="Telefone">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="txtMobileAdd" class="col-sm-4 col-form-label">Celular: </label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" id="txtMobileAdd" name="mobile" placeholder="Celular">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="txtDetailsAdd" class="col-sm-4 col-form-label">Details.: </label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" id="txtDetailsAdd" name="details" placeholder="Detalhes">
-                            </div>
-                        </div>
-    </div>
-  </div>
-                 
+				    			<div class="col-lg-6">
+				     
+				        				<div class="form-group row">
+				                            <label for="txtIdAdd" class="col-sm-4 col-form-label">Id: </label>
+				                            <div class="col-sm-6">
+				                                <input type="text" class="form-control" id="txtIdAdd" name="id" placeholder="Id" disabled>
+				                            </div>
+				                        </div>
+				                        <div class="form-group row">
+				                            <label for="txtNameAdd" class="col-sm-4 col-form-label">Nome: </label>
+				                            <div class="col-sm-6">
+				                                <input type="text" class="form-control" id="txtNameAdd" name="name" placeholder="Nome">
+				                            </div>
+				                        </div>
+				                        <div class="form-group row">
+				                            <label for="txtEmailAdd" class="col-sm-4 col-form-label">Email</label>
+				                            <div class="col-sm-6">
+				                                <input type="email" class="form-control" id="txtEmailAdd" name="email" placeholder="Email">
+				                            </div>
+				                        </div>
+				                        <div class="form-group row">
+				                            <label for="txtWebsiteAdd" class="col-sm-4 col-form-label">website: </label>
+				                            <div class="col-sm-6">
+				                                <input type="text" class="form-control" id="txtWebsiteAdd" name="website" placeholder="Website">
+				                            </div>
+				                        </div>
+				                        <div class="form-group row">
+				                            <label for="txtAddressAdd" class="col-sm-4 col-form-label">Endereço</label>
+				                            <div class="col-sm-6">
+				                                <textarea class="form-control" id="txtAddressAdd" name="address" placeholder="Endereço" rows="2"></textarea>
+				                            </div>
+				                        </div>
+				                  </div>
+				  
+		    				<div class="col-lg-6">
+		     
+		       					<div class="form-group row">
+		                            <label for="ddlCountryAdd" class="col-sm-4 col-form-label">País: </label>
+		                            <div class="col-sm-6">
+		                                <select class="form-control" id="ddlCountryAdd" name="countryid">
+		                                    <option>-SELECT-</option>
+		                                    <option th:each="country : ${countries}"
+		                                            th:value="${country.id}"
+		                                            th:text="${country.description}">
+		                                    </option>
+		                                </select>
+		                            </div>
+		                        </div>
+		                        <div class="form-group row">
+		                            <label for="ddlStateAdd" class="col-sm-4 col-form-label">Província: </label>
+		                            <div class="col-sm-6">
+		                                <select class="form-control" id="ddlStateAdd" name="stateid">
+		                                    <option>-SELECT-</option>
+		                                   <option th:each="state : ${states}"
+		                                            th:value="${state.id}"
+		                                            th:text="${state.name}">
+		                                    </option>
+		                                </select>
+		                            </div>
+		                        </div>
+		                        <div class="form-group row">
+		                            <label for="txtCityAdd" class="col-sm-4 col-form-label">Cidade: </label>
+		                            <div class="col-sm-6">
+		                                <input type="text" class="form-control" id="txtCityAdd" name="city" placeholder="Cidade">
+		                            </div>
+		                        </div>
+		                        <div class="form-group row">
+		                            <label for="txtPhoneAdd" class="col-sm-4 col-form-label">Telefone: </label>
+		                            <div class="col-sm-6">
+		                                <input type="text" class="form-control" id="txtPhoneAdd" name="phone" placeholder="Telefone">
+		                            </div>
+		                        </div>
+		                        <div class="form-group row">
+		                            <label for="txtMobileAdd" class="col-sm-4 col-form-label">Celular: </label>
+		                            <div class="col-sm-6">
+		                                <input type="text" class="form-control" id="txtMobileAdd" name="mobile" placeholder="Celular">
+		                            </div>
+		                        </div>
+		                        <div class="form-group row">
+		                            <label for="txtDetailsAdd" class="col-sm-4 col-form-label">Details.: </label>
+		                            <div class="col-sm-6">
+		                                <input type="text" class="form-control" id="txtDetailsAdd" name="details" placeholder="Detalhes">
+		                            </div>
+		                        </div>
+		    
+		  					</div>
+                 </div>
                 </div>
             </section>
 
@@ -120,6 +133,7 @@
             </section>
             </form>
         </div>
+        
     </div>
     </div>
     </section>
