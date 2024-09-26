@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
+
+
 <body>
-<div class="main-content container-fluid" layout:fragment="content">
-  <div class="row">
+
+<div layout:fragment="content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa fa-bars"></i> Parametros</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="/dashboard">Home</a></li>
+             
+                    <li><i class="fa fa-square-o"></i>Tarefas</li>
+                </ol>
+            </div>
+        </div>
+    <div class="container" style="width: 70%">
+    <div class="row justify-content-center" >
   <h1>   Adicionar Tarefa</h1>
   
   <div class="container"  style="width:100%">
@@ -36,40 +52,40 @@
                         </div>
                       </div>
 
-                    <div class="form-group">
-                        <label class="control-label col-sm-4">Projecto</label>
-
-                        <select class="form-control" id="ddlprojectAdd" name="projectid">
-                        <option>-SELECT-</option>
-                        <option th:each="project:${projects}"
-                        		th:value="${project.id}"
-                        		
-                        		th:text="${project.name}"></option>
-                        <option></option>
-                        
-                        </select>
-                      </div>
+                      
+                      			<div class="form-group">
+		                           
+		                              <label class="control-label col-sm-4">Projecto:</label>
+		                            <div class="col-sm-6">
+		                                <select class="form-control" id="ddlprojectAdd" name="projectid">
+		                                    <option>-SELECT-</option>
+		                                    <option th:each="project:${projects}"
+		                                            th:value="${project.id}"
+                        							th:text="${project.name}"></option>
+		                                    </option>
+		                                </select>
+		                            </div>
+		                        </div>
+		                        <div class="form-group">
+		                             <label class="control-label col-sm-4">Actividade:</label>
+		                            <div class="col-sm-6">
+		                                <select class="form-control" id="ddlactivityAdd" name="activityid">
+		                                    <option>-SELECT-</option>
+		                                   <option th:each="activity:${activities}"
+		                                            th:value="${activity.id}"
+		                                            th:text="${activity.name}">
+		                                    </option>
+		                                </select>
+		                            </div>
+		                        </div>
                       <!--date picker end-->
 
-                      <!--color picker start-->
-                      <div class="form-group">
-                        <label class="control-label col-sm-4">Actividade</label>
-
-                        <select class="form-control" id="ddlactivityAdd" name="activityid">
-                        <option>-SELECT-</option>
-                        <option th:each="activity:${activities}"
-                        		th:value="${activity.id}"
-                        		
-                        		th:text="${activity.name}"></option>
-                        <option></option>
-                        
-                        </select>
-                      </div>
+                   
                       
                         <div class="form-group">
                         <label class="control-label col-sm-4">Comentario</label>
 
-                        <div class="col-sm-5">
+                        <div class="col-sm-6">
                           <input name="comment" type="text" class="form-control">
                         </div>
                       </div>
@@ -99,10 +115,14 @@
             </div>
   
   
+
+  
   </div>
    
      
-
+</div>
 </div>
 </body>
 </html>
+
+  

@@ -35,6 +35,11 @@ public class Client {
 	private String mobile;
 	private String website;
 	private String email;
+	private String contactPersonName;
+	private String contactPersonPhone;
+	private String contactPersonEmail;
+
+	
 	
 	@ManyToOne
 	@JoinColumn(name="countryid", insertable=false, updatable=false)
@@ -174,13 +179,40 @@ public class Client {
 		this.details = details;
 	}
 
+	public String getContactPersonName() {
+		return contactPersonName;
+	}
+
+	public void setContactPersonName(String contactPersonName) {
+		this.contactPersonName = contactPersonName;
+	}
+
+	public String getContactPersonPhone() {
+		return contactPersonPhone;
+	}
+
+	public void setContactPersonPhone(String contactPersonPhone) {
+		this.contactPersonPhone = contactPersonPhone;
+	}
+
+	public String getContactPersonEmail() {
+		return contactPersonEmail;
+	}
+
+	public void setContactPersonEmail(String contactPersonEmail) {
+		this.contactPersonEmail = contactPersonEmail;
+	}
+
 	@Override
 	public String toString() {
 		return "Client [id=" + id + ", name=" + name + ", address=" + address + ", city=" + city + ", phone=" + phone
-				+ ", mobile=" + mobile + ", website=" + website + ", email=" + email + ", country=" + country
-				+ ", countryid=" + countryid + ", state=" + state + ", stateid=" + stateid + ", wallet=" + wallet
-				+ ", walletid=" + walletid + ", details=" + details + "]";
+				+ ", mobile=" + mobile + ", website=" + website + ", email=" + email + ", contactPersonName="
+				+ contactPersonName + ", contactPersonPhone=" + contactPersonPhone + ", contactPersonEmail="
+				+ contactPersonEmail + ", country=" + country + ", countryid=" + countryid + ", state=" + state
+				+ ", stateid=" + stateid + ", wallet=" + wallet + ", walletid=" + walletid + ", details=" + details
+				+ "]";
 	}
-	
+
+
 	
 }
